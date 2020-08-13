@@ -5,7 +5,7 @@ public class SwitchExercisesRunner {
 	public static void main(String[] args) {
 //		SwitchExercise switchExcercise = new SwitchExercise();
 
-		boolean bo = SwitchExercises.isWeekDay(1);
+		boolean bo = SwitchExercises.isWeekDay(2);
 		System.out.println("is a WeekDay?: " + bo);
 
 		String month = SwitchExercises.determineNameOfTheMonth(1);
