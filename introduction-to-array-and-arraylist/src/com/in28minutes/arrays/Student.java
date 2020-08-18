@@ -28,18 +28,10 @@ public class Student {
 	}
 
 	public int getMaximumMark() {
-//		int max = Integer.MIN_VALUE;
-//		for (int mark : marks)
-//			if (mark > max)
-//				max = mark;
 		return Collections.max(marks);
 	}
 
 	public int getMinimumMark() {
-//		int min = Integer.MAX_VALUE;
-//		for (int mark : marks)
-//			if (mark <= min)
-//				min = mark;
 		return Collections.min(marks);
 	}
 
@@ -60,6 +52,14 @@ public class Student {
 	@Override
 	public String toString() {
 		return name + marks;
+	}
+
+	public void addNewMark(int mark) {
+		marks.add(mark);
+	}
+
+	public void removeMarkAtIndex(int index) {
+		marks.remove(index);
 	}
 
 }

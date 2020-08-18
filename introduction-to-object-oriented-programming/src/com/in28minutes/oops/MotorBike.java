@@ -4,6 +4,7 @@ public class MotorBike {
 	// state
 	private int speed;
 
+	//constructors
 	MotorBike(int speed) {
 		this.speed = speed;
 	}
@@ -12,6 +13,7 @@ public class MotorBike {
 		this(5);
 	}
 
+	//behavior
 	public void setSpeed(int speed) {
 		if (speed > 0)
 			this.speed = speed;
