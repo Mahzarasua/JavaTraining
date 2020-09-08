@@ -1,0 +1,54 @@
+package com.in28minutes.generics;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class GenericsRunner {
+
+	static <X> X doubleValue(X value) {
+		return value;
+	}
+
+	static <X extends List> void duplicate(X list) {
+		list.addAll(list);
+	}
+
+	public static void main(String[] args) {
+		String value = doubleValue(new String());
+		Integer number = doubleValue(Integer.valueOf(5));
+		ArrayList list1 = doubleValue(new ArrayList());
+
+		LinkedList<Integer> numbers = new LinkedList<>(List.of(1, 2, 3));
+		duplicate(numbers);
+		System.out.println(numbers);
+
+//		MyCustomList<String> list = new MyCustomList();
+//
+//		list.addElement("Element 1");
+//		list.addElement("Element 2");
+//
+//		String value = list.get(0);
+//
+//		System.out.println(list);
+
+		MyCustomList<Long> list3 = new MyCustomList();
+
+		list3.addElement(1l);
+		list3.addElement(9l);
+
+		Long long1 = list3.get(0);
+
+		System.out.println(list3);
+
+		MyCustomList<Integer> list2 = new MyCustomList();
+
+		list2.addElement(Integer.valueOf(5));
+		list2.addElement(Integer.valueOf(7));
+
+		Integer number1 = list2.get(0);
+
+		System.out.println(list2);
+	}
+
+}
