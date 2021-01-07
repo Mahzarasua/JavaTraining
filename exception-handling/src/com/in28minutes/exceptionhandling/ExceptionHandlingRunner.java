@@ -1,6 +1,6 @@
 package com.in28minutes.exceptionhandling;
 
-public class ExceptionHandlingRunner {
+public class ExceptionHandlingRunner extends RuntimeException {
 
 	public static void main(String[] args) {
 		method1();
@@ -19,7 +19,7 @@ public class ExceptionHandlingRunner {
 
 			System.out.println("method2 ended");
 		} catch (NullPointerException e) {
-			System.out.println("Matched NullPointerException");
+			System.out.println("Matched NullPointerException.");
 			e.printStackTrace();
 		} catch (Exception e) {
 			System.out.println("Matched Exception");
